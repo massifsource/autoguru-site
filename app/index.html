@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="autoGuruApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="autoGuruApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="autoGuruApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="autoGuruApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Auto Guru</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+  <!-- Use this for general jquery if you don't want to mess with angular controller jquery. -->
+  <script>
+    $(document).ready(function () {
+      $(".hamburger").click(function () {
+        $(".hamburger-nav").stop().fadeTo('fast', 1)
+        $(".hamburger-close").show()
+        $(this).hide()
+      })
+
+      $(".hamburger-close").click(function () {
+        $(".hamburger-nav").stop().fadeTo('fast', 0)
+        $(".hamburger").show()
+        $(this).hide()
+      })
+
+      $("a").click(function () {
+        // We don't want to show the left sidebar whenever a link is clicked.
+        $(".hamburger-nav").stop().fadeTo('fast', 0)
+        $(".hamburger").show()
+        $(".hamburger-close").hide()
+      })
+    })
+  </script>
+</head>
+<body class="body-background-color">
+  <header class="header container-fluid">
+    <span>
+      <button class="hamburger colored"><colored>&#9776;&nbsp;menu</colored></button>
+      <button class="hamburger-close colored" style="display: none;"><colored>&#10005;</colored></button>
+      <h2 id="header-text">Auto Guru</h2>
+    </span>
+  </header>
+
+  <div class="hamburger-nav">
+    <div id="hamburger-links" style="margin-top: 10px; color: #DDD;">
+      <div id="hamburger-main-links">
+        <h3><a href="#/home">home</a></h3>
+        <hr>
+        <h3><a href="#/cities">cities</a></h3>
+        <hr>
+        <h3><a href="#/home">features</a></h3>
+        <hr>
+      </div>
+
+      <div id="hamburger-secondary-links">
+        <p><a href="#/terms">terms</a></p>
+        <p><a href="#/privacy">privacy</a></p>
+      </div>
+    </div>
+
+    <div style="position: absolute; bottom: 0; margin-bottom: 85px;">
+      <div class="store-badge">
+        <button class="app-store-badge"></button>
+      </div>
+      <div class="store-badge">
+        <button class="google-play-badge"></button>
+      </div>
+    </div>
+  </div>
+
+  <div id="wrap">
+    <div id="main" class="container">
+      <!--[if lt IE 7]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <div ng-view autoscroll="true"></div>
+
+      <!-- In production use:
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+      -->
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="app.js"></script>
+      <script src="view1/view1.js"></script>
+      <script src="cities/cities.js"></script>
+      <script src="terms/terms.js"></script>
+      <script src="privacy/privacy.js"></script>
+      <script src="components/version/version.js"></script>
+      <script src="components/version/version-directive.js"></script>
+      <script src="components/version/interpolate-filter.js"></script>
+    </div>
+  </div>
+
+  <footer class="footer container-fluid">
+    <a href="#/home">&#169; 2016 Auto Guru</a>&nbsp;|&nbsp;<a href="#/terms">Terms</a>&nbsp;|&nbsp;<a href="#/privacy">Privacy</a>
+
+    <div class="store-badge">
+      <span>
+        <button class="app-store-badge"></button>
+        <button class="google-play-badge"></button>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

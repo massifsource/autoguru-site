@@ -1,0 +1,34 @@
+<div class='row'>
+  <div class='col-md-12' style='text-align: center'>
+    <h2>How Auto Guru Works</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6" style="height: 600px;">
+    <div class="device">
+      <img src="img/iphone-with-buttons.png" width='359px' usemap="#device-map">
+
+      <map name="device-map">
+        <area shape="rect" coords="55, 160, 179, 280" ng-click='view1Data.repairBtn()'>
+        <area shape="rect" coords="182, 160, 307, 280" ng-click='view1Data.accidentBtn()'>
+        <area shape="rect" coords="55, 283, 179, 404" ng-click='view1Data.cantDriveBtn()'>
+        <area shape="rect" coords="182, 283, 307, 404" ng-click='view1Data.trafficBtn()'>
+        <area shape="rect" coords="55, 407, 179, 528" ng-click='view1Data.feedbackBtn()'>
+        <area shape="rect" coords="182, 407, 307, 528" ng-click='view1Data.socialBtn()'>
+        <area shape="circle" coords="180, 600, 25" ng-click='view1Data.generalBtn()'>
+      </map>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="device-text">
+      <device-general-info ng-show='view1Data.partial === "general"'></device-general-info>
+      <device-repair-info ng-show='view1Data.partial === "repair"'></device-repair-info>
+      <device-accident-info ng-show='view1Data.partial === "accident"'></device-accident-info>
+      <device-cant-drive-info ng-show='view1Data.partial === "cantDrive"'></device-cant-drive-info>
+      <device-traffic-info ng-show='view1Data.partial === "traffic"'></device-traffic-info>
+      <device-feedback-info ng-show='view1Data.partial === "feedback"'></device-feedback-info>
+      <device-social-info ng-show='view1Data.partial === "social"'></device-social-info>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,202 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #17AA4F !important;
+}
+
+.body-background-color {
+  background-color: rgba(206, 206, 206, 1);
+  color: #444;
+}
+
+.header {
+  position: fixed;
+  height: 75px;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(62, 60, 61, 0.85);
+  color: #DDDDDD;
+  font-family: Verdana, Geneva, sans-serif;
+  text-align: center;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  margin-top: 85px;
+  margin-bottom: 85px;
+  padding-bottom:150px;
+}
+
+.footer {
+  position: relative;
+  height: 130px;
+  clear: both;
+  padding-top: 20px;
+  z-index: 10;
+  /*background-color: rgba(78, 78, 78, 1);*/
+  background-color: rgba(48, 66, 81, 1);
+  color: #DDDDDD;
+  text-align: center;
+  float: center;
+  font-size: 12px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+.device {
+  position: absolute;
+  min-height: 676px;
+  left: 20%;
+}
+
+.device-text {
+  padding: 100px 20px 100px 20px;
+  padding-right: 10%;
+}
+
+.hamburger {
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 45px;
+  padding: 13px 15px 0px 15px;
+  margin-left: 5px;
+  color: #DDDDDD;
+  border: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 1000;
+}
+
+.hamburger-close {
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 45px;
+  padding: 13px 15px 0px 15px;
+  margin-left: 5px;
+  color: #DDDDDD;
+  border: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  z-index: 1000;
+}
+
+.hamburger colored:hover {
+  color: #17AA4F;
+}
+
+.hamburger-close colored:hover {
+  color: #17AA4F;
+}
+
+.hamburger-nav {
+  opacity: 0;
+  left: 0px;
+  top: 75px;
+  position: fixed;
+  width: 220px;
+  height: 100%;
+  z-index: 99;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(62, 60, 61, 0.85);
+  padding-left: 10px;
+}
+
+.store-badge {
+  margin-top: 10px;
+}
+
+.app-store-badge {
+  background: url('./img/app-store-button.svg');
+  width: 135px;
+  height: 40px;
+  border: 0;
+  margin: 0 3px 0 3px;
+}
+
+.google-play-badge {
+  background: url('./img/google-play-badge.png');
+  width: 135px;
+  height: 40px;
+  border: 0;
+  margin: 0 3px 0 3px;
+}
+
+.highlighted-device-button {
+  background-color: rgba(78, 78, 78, 0.5);
+  width: 125px;
+  height: 125px;
+}
+
+#hamburger-main-links hr {
+  margin-right: 10px;
+}
+
+#hamburger-main-links h3 {
+  margin-bottom: -5px; margin-top: -5px; padding-left: 10px;
+}
+
+#hamburger-secondary-links p {
+  padding-left: 10px;
+}
+
+#hamburger-secondary-links {
+  padding-top: 10px;
+}
+
+#header-text {
+  float: center;
+  padding-left: 60px;
+}
